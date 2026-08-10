@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Caio Miguel — send a message via the contact form."
+    />
+    <title>Contact · Caio Miguel</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-nav">
+      <a class="logo" href="index.html">Caio <span>Miguel</span></a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+
+    <main class="page container">
+      <header class="page-header">
+        <p class="eyebrow">Get in touch</p>
+        <h1>Contact</h1>
+        <p>
+          Fill out the form and your email app will open with a drafted message.
+          No address is shown on this page.
+        </p>
+      </header>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <!-- Honeypot: leave empty -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="name"
+            placeholder="Jane Doe"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="email"
+            >Your email
+            <span class="hint">(so I can reply)</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Brief subject line"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="What would you like to discuss?"
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Open email draft</button>
+        </div>
+
+        <p id="contact-status" class="form-status" hidden role="status"></p>
+      </form>
+
+      <p class="contact-note">
+        This form builds a message in your own mail client — nothing is stored
+        on this site. If no mail app opens, set a default email application on
+        your device and try again.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="index.html">Home</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

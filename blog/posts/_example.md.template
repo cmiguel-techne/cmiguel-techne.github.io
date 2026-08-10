@@ -1,0 +1,17 @@
+---
+title: Your post title
+date: 2026-08-12
+blurb: One or two sentences shown on the blog index.
+---
+
+Write your post in Markdown below the frontmatter.
+
+## A heading
+
+Paragraphs are separated by a blank line. You can use **bold**, *italic*,
+`inline code`, and [links](https://example.com).
+
+- Bullet list item
+- Another item
+
+> A short quote or callout.
