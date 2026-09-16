@@ -5,3 +5,6 @@ Thumbs.db
 .vscode/
 node_modules/
 package-lock.json
+
+# Local draft previews (node scripts/build-blog.mjs --with-drafts)
+blog/drafts/

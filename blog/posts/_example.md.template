@@ -2,7 +2,14 @@
 title: Your post title
 date: 2026-08-12
 blurb: One or two sentences shown on the blog index.
+status: draft
 ---
+
+# status
+
+- `public` — listed on the blog and published as `blog/your-slug.html`
+- `draft` — kept as Markdown only (not on the public site). Preview with:
+  `node scripts/build-blog.mjs --with-drafts`
 
 Write your post in Markdown below the frontmatter.
 

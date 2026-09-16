@@ -79,19 +79,32 @@ If the site is **not** at the domain root (project Pages URL), asset paths still
    title: My post title
    date: 2026-08-12
    blurb: Short teaser shown on the blog index.
+   status: draft
    ---
 
    Your Markdown body here.
    ```
 
-2. Build:
+2. Set **`status`**:
+   - `draft` — not on the public blog, no public HTML (safe to commit the Markdown)
+   - `public` — listed on `blog.html` and published as `blog/my-slug.html`
+
+3. Build:
 
    ```bash
    node scripts/build-blog.mjs
    ```
 
-3. Commit the Markdown **and** the generated files (`blog.html`, `blog/*.html`, `blog/posts.json`).
+   Preview drafts locally (writes gitignored `blog/drafts/`):
 
-The `blurb` is the short description on the blog list. Posts are ordered by `date` (newest first); optional `order` breaks ties on the same day.
+   ```bash
+   node scripts/build-blog.mjs --with-drafts
+   ```
+
+   Then open `blog/drafts/index.html` via your local server.
+
+4. Commit the Markdown **and** generated public files (`blog.html`, `blog/<public-slug>.html`, `blog/posts.json`). Do **not** commit `blog/drafts/`.
+
+The `blurb` is the short description on the blog list. Posts are ordered by `date` (newest first); optional `order` breaks ties on the same day. Aliases: `published` → public; `private` / `wip` → draft.
 
 The contact form does **not** show an email address. The destination is reconstructed in JavaScript only when the form is submitted (split base64 parts), then a `mailto:` draft opens in the visitor’s email app.

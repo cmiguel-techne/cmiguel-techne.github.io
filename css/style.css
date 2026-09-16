@@ -663,6 +663,33 @@ img {
   color: var(--link);
 }
 
+.status-draft {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.draft-banner {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.draft-banner strong {
+  color: var(--accent);
+}
+
 .status-planned {
   background: var(--accent-soft);
   color: var(--accent);
